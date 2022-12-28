@@ -1,0 +1,46 @@
+
+<div class="container mt-3">
+  <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalCreat" routerLink="/create">
+    Open modal
+  </a>
+</div>
+
+<div class="container mt-3">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Tuor</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of service.list , let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.price}}</td>
+      <td>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModalEdit"
+                (click)="service.show(i,c)" routerLink="/edit">
+          Edit
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModalDelete"
+                (click)="service.delete(i)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+

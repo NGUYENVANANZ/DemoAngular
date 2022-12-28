@@ -1,0 +1,27 @@
+
+<div style="margin-left: 500px">
+  <div>
+    <tr>
+      <p>Tuor</p>
+      <input [(ngModel)]="service.tuor.name" style="width: 400px">
+    </tr>
+    <br>
+    <tr>
+      <p>Price</p>
+      <input [(ngModel)]="service.tuor.price" style="width: 400px">
+    </tr>
+    <br>
+    <tr>
+      <p>Describe</p>
+      <textarea [(ngModel)]="service.tuor.describe" class="form-control" rows="5" name="text"
+                style="width: 400px"></textarea>
+    </tr>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="service.creat(service.tuor)">Creat
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="service.cancel()" routerLink="/">Hủy</button>
+  </div>
+</div>
+
